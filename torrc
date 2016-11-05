@@ -1,0 +1,11 @@
+# Keep no statistics.
+DirReqStatistics 0
+ExtraInfoStatistics 0
+
+# Run Tor only as a hidden service and do not create a local SOCKS proxy
+SocksPort 0
+SocksPolicy reject *
+
+# Define hidden service
+HiddenServiceDir /var/lib/tor/hidden_service/
+HiddenServicePort 80 127.0.0.1:80
