@@ -14,7 +14,9 @@ You must ensure that the aforementioned `hostname` and `private_key` files are a
 ### Deployment
 Running a manually-built container is similar to the above:
 ```
-docker run --link nginx:web --name onion torhiddenservice
+docker run --name onion torhiddenservice
 ```
 
-This depends on a container called `nginx` running and exposing HTTP ports (`80`). You can find an example systemd service to auto-start the hidden service container [within my webpage repo](https://github.com/ajhaydock/alexhaydock.co.uk/blob/master/docker/alexhaydockonion.service).
+You will need to tweak the Dockerfile to your needs. In my example, I am forwarding HTTP requests to the relevant port on my host IP (`172.16.16.30`). You almost certainly want to change this.
+
+You can find an example systemd service to auto-start the hidden service container [within my webpage repo](https://github.com/ajhaydock/alexhaydock.co.uk/blob/master/docker/alexhaydockonion.service).

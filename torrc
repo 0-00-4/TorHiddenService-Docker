@@ -8,4 +8,4 @@ SocksPolicy reject *
 
 # Define hidden service
 HiddenServiceDir /var/lib/tor/hidden_service/
-HiddenServicePort 80 127.0.0.1:80
+HiddenServicePort 80 172.16.16.30:80
